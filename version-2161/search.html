@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>搜索影视作品 - 影视大全网</title>
+    <meta name="description" content="影视大全网搜索页面，支持按片名、类型、地区、年份与标签筛选国产电视剧和高清影视资源。">
+    <meta name="keywords" content="影视搜索,国产电视剧全集,免费高清在线,影视大全网,热播剧全集,电视剧资源">
+    <link rel="stylesheet" href="assets/css/original.css">
+    <link rel="stylesheet" href="assets/css/site.css">
+    
+</head>
+<body class="site-body">
+<header class="site-header">
+    <div class="header-inner">
+        <a class="brand" href="index.html" aria-label="影视大全网">
+            <span class="brand-icon">▶</span>
+            <span class="brand-name">影视大全网</span>
+        </a>
+        <button class="mobile-menu-button" type="button" aria-label="菜单" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="main-nav">
+            <a href="index.html">首页</a>
+            <a href="categories.html">分类</a>
+            <a href="rankings.html">排行榜</a>
+            <a href="search.html">搜索</a>
+            <a href="about.html">关于</a>
+        </nav>
+        <form class="header-search" action="search.html" method="get">
+            <input type="search" name="q" placeholder="搜索片名、类型、地区" autocomplete="off">
+            <button type="submit">搜索</button>
+        </form>
+    </div>
+    <div class="mobile-panel">
+        <nav>
+            <a href="index.html">首页</a>
+            <a href="categories.html">分类总览</a>
+            <a href="rankings.html">排行榜</a>
+            <a href="search.html">搜索筛选</a>
+            <a href="category/latest-hot.html">最新热播</a><a href="category/guochan-juji.html">国产剧集</a><a href="category/huayu-movie.html">华语电影</a><a href="category/oumei-yingshi.html">欧美影视</a><a href="category/rihan-jingxuan.html">日韩精选</a><a href="category/action-sci-fi.html">动作科幻</a>
+        </nav>
+    </div>
+</header>
+<main>
+    <section class="page-hero">
+        <span class="section-eyebrow">Search</span>
+        <h1>搜索与筛选</h1>
+        <p>输入片名、类型、标签、年份或地区，快速筛选影视大全网片库内容。</p>
+    </section>
+    <section class="section">
+        <div class="search-panel">
+            <form class="search-form">
+                <input id="search-keyword" type="search" placeholder="搜索片名、简介、地区、类型" autocomplete="off">
+                <select id="search-type" aria-label="类型筛选">
+                    <option value="">全部类型</option>
+                    <option value="电影">电影</option><option value="电视剧">电视剧</option><option value="剧集">剧集</option><option value="动画">动画</option><option value="纪录片">纪录片</option><option value="综艺">综艺</option><option value="悬疑">悬疑</option><option value="动作">动作</option><option value="爱情">爱情</option><option value="喜剧">喜剧</option>
+                </select>
+                <select id="search-year" aria-label="年份筛选">
+                    <option value="">全部年份</option>
+                    <option value="2029">2029</option><option value="2028">2028</option><option value="2027">2027</option><option value="2026">2026</option><option value="2025">2025</option><option value="2024">2024</option><option value="2023">2023</option><option value="2022">2022</option><option value="2021">2021</option><option value="2020">2020</option><option value="2019">2019</option><option value="2018">2018</option><option value="2017">2017</option><option value="2016">2016</option><option value="2015">2015</option>
+                </select>
+                <button type="submit">搜索</button>
+            </form>
+        </div>
+        <div id="search-results" class="movie-grid"></div>
+        <div id="search-empty" class="empty-state" style="display: none;">暂未找到匹配影片，请调整关键词或筛选条件。</div>
+    </section>
+</main>
+<footer class="site-footer">
+    <div class="footer-inner">
+        <div>
+            <a class="footer-brand" href="index.html">影视大全网</a>
+            <p>提供国产电视剧全集免费高清在线观看服务，本站是内容全面的影视大全网，剧集资源完整，画质优良，追剧体验佳。</p>
+        </div>
+        <div>
+            <h2>频道导航</h2>
+            <div class="footer-links">
+                <a href="category/latest-hot.html">最新热播</a><a href="category/guochan-juji.html">国产剧集</a><a href="category/huayu-movie.html">华语电影</a><a href="category/oumei-yingshi.html">欧美影视</a><a href="category/rihan-jingxuan.html">日韩精选</a><a href="category/action-sci-fi.html">动作科幻</a><a href="category/mystery-crime.html">悬疑犯罪</a><a href="category/comedy-romance.html">喜剧爱情</a>
+            </div>
+        </div>
+        <div>
+            <h2>服务入口</h2>
+            <div class="footer-links">
+                <a href="support.html">服务支持</a>
+                <a href="copyright.html">版权保护</a>
+                <a href="search.html">站内搜索</a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">© 2026 影视大全网 · 高清影视内容库</div>
+</footer>
+<script src="assets/js/site.js" defer></script>
+<script src="assets/js/movies-data.js" defer></script>
+<script src="assets/js/search.js" defer></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?95df08bc498ee0333203841fd6fee1eb";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</body>
+</html>
